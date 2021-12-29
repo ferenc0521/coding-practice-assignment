@@ -1,0 +1,196 @@
+
+practice 2 700/1200
+-----------------------------------------------------------
+solution(arr,l,r) 100/300
+return boolean array r
+r if there is integer x where arr[i]=(i+1) * x , and l <= x <= r
+forgot to check for arr[i]/(i+1) = int(arr[i]/(i+1))
+-----------------------------------------------------------
+tinypairs
+solution(arr,k) 300/300
+return boolean array r 
+r[i] true if concatenate(arr[i] and arr[-(i+1)])
+-----------------------------------------------------------
+				300/300
+-----------------------------------------------------------
+max frequencies 0/300
+solution(arr,m)
+return int array r with the maximum frequencies in each of the contiguous subarray of length m
+=================================================================
+practice 1 0/1200
+-----------------------------------------------------------
+mutate
+n=5 a=[4,0,1,-2,3] => b=[4,5,-1,2,1]
+b[i]= a[i] + a[i+1] (or 0) + a[i-1] (or 0)
+-----------------------------------------------------------
+mutate2
+
+a= [1,3,5,6,4,2] => b=[1,2,3,4,5,6] return true
+a= [1,4,5,6,3]   => b=[1,3,4,6,5] return false 
+strict ascending order
+-----------------------------------------------------------
+stringMerge
+"99" "99" = "1818"
+-----------------------------------------------------------
+ribbon cutting
+a[i] length of the ribbon
+
+k ribbons of the same lengths into cutting the ribbons as many pieces as you want
+max integer length L for which it is possible to obtain  at least k ribbons of length L by cutting the given ones
+
+a=[5,2,7,4,9] and k=5  solution a,k =>4
+-----------------------------------------------------------
+
+You created a meal plan for the next few days and prepared a list of products that you will need as ingredients for each day's meal.
+There are many shops, but you only have time to visit two each day.
+
+Given the following information, you will need to find the minimum cost you'll need to spend on each meal
+
+cntProducts an integer representing the total number of products you will be using in all of your meals
+quantities[i][j] = represents the product j available in shop i
+costs [i][j]     = represent cost of product j from shop i
+meals [m][j]     = represent the amount of product j required to make the mth meal
+
+cntProducts = 2
+quantities [ [1,3],[2,1],[1,3] ]
+costs      [ [2,4],[5,2],[4,1] ]
+meals      [ [1,1],[2,2],[3,4] ]
+
+The output should be solution( ) = [ 3 , 8, 19 ]
+
+There are 3 shops and 2 products in total
+
+To cook the first meal you need to buy one product 0 and one product 1. 
+The most optimal way is to buy them in the first and third shops respectively: buying one product 0 in the first shop costs 2 * 1 = 2 and 
+buying one product in the third shop costs 1 * 1 =1 So you pay 2+1= 3 units of money for this meal
+
+To cook the second meal you need to buy two product 0 and two of product 1 
+The optimal way is to buy two product 0 in the first shop and then buy one product 0 and two product 1s in the third shop.
+This way you spend (1*2) + (1*4 + 2*1) = 8 units of money
+
+To cook the third meal you need to buy three product 0 and 4 of product 1 
+The optimal way is to buy two product 0s and one product 1 in the second shop, and then buy one product 0 and three product 1s in the third shop
+This way, yo spend (2*5 + 1*2) + (1*4 + 3*1) = 19 units of money
+
+costs.length = quantities.length
+costs[i].length=cntProducts
+1 <= costs[i][j] <= 1000
+
+1 <= meals.length <= 50
+meals[i].length = cntProducts
+
+
+return an array of integers of length meals.length where the ith element represents the minimum cost  for buying the products to cook the ith meal by visiting only one or two shops
+
+============calculating mealcosts
+---------meal 0
+---single 0
+meal 0 store 0 enough True [1, 1]
+cost 1 x 2 = 2
+cost 1 x 4 = 4
+0 0 x [6] min 6
+---pair 0 and 1
+meal 0 stores 0 1 enough True [1, 1]
+meal [1, 1] store [1, 3] [2, 4] storeb [2, 1] [5, 2]
+needs 1 of 0 storea 1 @ 2 storeb 2 @ 5
+cost 1 x 2 = 2
+needs 1 of 1 storea 3 @ 4 storeb 1 @ 2
+cost 1 x 2 = 2
+0 0 1 [6, 4] min 4
+---pair 0 and 2
+meal 0 stores 0 2 enough True [1, 1]
+meal [1, 1] store [1, 3] [2, 4] storeb [1, 3] [4, 1]
+needs 1 of 0 storea 1 @ 2 storeb 1 @ 4
+cost 1 x 2 = 2
+needs 1 of 1 storea 3 @ 4 storeb 3 @ 1
+cost 1 x 1 = 1
+0 0 2 [6, 4, 3] min 3
+---single 1
+meal 0 store 1 enough True [1, 1]
+cost 1 x 5 = 5
+cost 1 x 2 = 2
+0 1 x [6, 4, 3, 7] min 3
+---pair 1 and 2
+meal 0 stores 1 2 enough True [1, 1]
+meal [1, 1] store [2, 1] [5, 2] storeb [1, 3] [4, 1]
+needs 1 of 0 storea 2 @ 5 storeb 1 @ 4
+cost 1 x 4 = 4
+needs 1 of 1 storea 1 @ 2 storeb 3 @ 1
+cost 1 x 1 = 1
+0 1 2 [6, 4, 3, 7, 5] min 3
+---single 2
+meal 0 store 2 enough True [1, 1]
+cost 1 x 4 = 4
+cost 1 x 1 = 1
+0 2 x [6, 4, 3, 7, 5, 5] min 3
+meal [1, 1] min_cost 3
+---------meal 1
+---single 0
+meal 1 store 0 enough False []
+---pair 0 and 1
+meal 1 stores 0 1 enough True [1, 1]
+meal [2, 2] store [1, 3] [2, 4] storeb [2, 1] [5, 2]
+needs 2 of 0 storea 1 @ 2 storeb 2 @ 5
+cost 1 x 2 = 2
+++++ 1 x 5 = 5
+needs 2 of 1 storea 3 @ 4 storeb 1 @ 2
+cost 1 x 2 = 2
+++++ 1 x 4 = 4
+1 0 1 [13] min 13
+---pair 0 and 2
+meal 1 stores 0 2 enough True [1, 1]
+meal [2, 2] store [1, 3] [2, 4] storeb [1, 3] [4, 1]
+needs 2 of 0 storea 1 @ 2 storeb 1 @ 4
+cost 1 x 2 = 2
+++++ 1 x 4 = 4
+needs 2 of 1 storea 3 @ 4 storeb 3 @ 1
+cost 2 x 1 = 2
+1 0 2 [13, 8] min 8
+---single 1
+meal 1 store 1 enough False [1]
+---pair 1 and 2
+meal 1 stores 1 2 enough True [1, 1]
+meal [2, 2] store [2, 1] [5, 2] storeb [1, 3] [4, 1]
+needs 2 of 0 storea 2 @ 5 storeb 1 @ 4
+cost 1 x 4 = 4
+++++ 1 x 5 = 5
+needs 2 of 1 storea 1 @ 2 storeb 3 @ 1
+cost 2 x 1 = 2
+1 1 2 [13, 8, 11] min 8
+---single 2
+meal 1 store 2 enough False []
+meal [2, 2] min_cost 8
+
+
+
+---------meal 2
+---single 0
+meal 2 store 0 enough False []
+---pair 0 and 1
+meal 2 stores 0 1 enough True [1, 1]
+meal [3, 4] store [1, 3] [2, 4] storeb [2, 1] [5, 2]
+needs 3 of 0 storea 1 @ 2 storeb 2 @ 5
+cost 1 x 2 = 2
+++++ 2 x 5 = 10
+needs 4 of 1 storea 3 @ 4 storeb 1 @ 2
+cost 1 x 2 = 2
+++++ 3 x 4 = 12
+2 0 1 [26] min 26
+---pair 0 and 2
+meal 2 stores 0 2 enough False []
+---single 1
+meal 2 store 1 enough False []
+---pair 1 and 2
+meal 2 stores 1 2 enough True [1, 1]
+meal [3, 4] store [2, 1] [5, 2] storeb [1, 3] [4, 1]
+needs 3 of 0 storea 2 @ 5 storeb 1 @ 4
+cost 1 x 4 = 4
+++++ 2 x 5 = 10
+needs 4 of 1 storea 1 @ 2 storeb 3 @ 1
+cost 3 x 1 = 3
+++++ 1 x 2 = 2
+2 1 2 [26, 19] min 19
+---single 2
+meal 2 store 2 enough False []
+meal [3, 4] min_cost 19
+============mealcosts [3, 8, 19]
