@@ -1,4 +1,54 @@
-
+practice 3 480/1200
+-----------------------------------------------------------
+zigzag 
+[1,2,1,3,4]=>[1,1,0]
+1,2,1 =>1
+2,1,3 =>1
+1,3,4 =>0
+-----------------------------------------------------------
+palindrome
+solution(s)
+take all prefixes and chose the longest palindrome between them
+if this chosen prefix contains at least 2 characters,cut this prefix from s and go back to the first step
+1.,
+s="aaacodedoc"=""
+cut "aaa" => codedoc
+cut "codedoc" => ""
+2.,
+s=codesignal => codesignal
+-----------------------------------------------------------
+count contiguous subarrays with strictly decreasing sequence
+[9,8,7,6,5]=>15
+5+4+3+2+1
+[10,10,10]=>3
+-----------------------------------------------------------
+minesweeper
+on each turn the player clicks on a cell
+-if it has a bomb- game over,player loses
+-if not, a number appears representing how many mines are in the neighbouring 8 cells
+-if the revealed number is zero then each of the neighbouring cells are automatically revealed in the same way
+array field representing the distribution of the bombs in a rectangular field
+x,y representing the coordinates of the player's first clicked cell, x=row, y =column, both 0 based
+your task is to return an integer matrix of the same dimension as field after applying this click 
+if a cell remains concealed the corresponding element should have a value of -1
+it is guaranteed  that the clicked cell doesn't contain a mine
+1.,
+field = 
+[[false,true,true],
+ [true,false,true],
+ [false,false,true]] and x=1 y=1 has 5 neighbors with a bomb, and the other elements should be -1 since no other cell would be expanded
+2.,
+field = 
+ [[true,false,true,true,false],
+ [true,false,false,false,false],
+ [false,false,false,false,false],
+ [true,false,false,false,false]] and x=3 y=2
+solution(field, x,y) =
+[[-1,-1,-1,-1,-1],
+ [-1, 3, 2, 2, 1],
+ [-1, 2, 0, 0, 0],
+ [-1, 1, 0, 0, 0]]
+===========================================================
 practice 2 700/1200
 -----------------------------------------------------------
 solution(arr,l,r) 100/300
