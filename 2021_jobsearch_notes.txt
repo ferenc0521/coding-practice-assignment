@@ -1,0 +1,82 @@
+
+interviewing.io
+81.1K subscribers
+Book a mock interview or coaching session with a Google engineer as early as tomorrow on interviewing.io! Sign up here: https://interviewing.io/signup
+Check out the feedback by the Google interviewer and the full transcript on https://interviewing.io/recordings/Py...
+Or view other Python interviews: https://interviewing.io/python-interv...
+Disclaimer: All interviews are shared with explicit permission from the interviewer and the interviewee, and all interviews are anonymous. interviewing.io has the sole right to distribute this content.
+
+The short answer is yes, it would be great to connect with your GitHub programmer friend and see what opportunities are there.
+But since I meant to keep a log on this job search experience for myself and my friends, and I meant to give you an update anyway...
+
+No, I don't have my new gig yet, doing interviews and honing my coding interview chops (mostly in python3).
+Not that I think those skills would be a good predictor of the level of possible contributions, but they look like an effective filter (at some companies) to weed you out of considerations, esp. at larger companies with HR "candidate mills" workflow.
+
+I got a couple of bites on my updated linkedin profile, some of those lead to creating a hired.com profile and I also created a glassdoor profile.
+
+In the first round I applied for both application eng and software development roles where I thought I had the best chance/best fit, some connections/referrals:
+The referral things didn't really work out, I think they prefer if their recruiter initiates the contact.
+
+	- Salesforce, (Salesforce and Slack) (with your encouragement) : no reply no pingback
+
+	- Okta (Paul Wallace's encouragement) : no reply no pingback
+
+	- Google with Aaron Hurst referral (I also had an encouraging mtg with Tim Alper) : polite reply - "we decided not to go further"
+	I thought I would probably fail the infamous google engineer coding interviews, but didn't even come to the initial HR screen.
+
+	- OSISsoft Aggregation and analysis of IOT (legacy industrial process control sensors data internet enabled)
+		Traditionally on-prem .net C# servers moving to MS Azure.
+		First interviews in these search: two level phone interviews with contract recruiters. I though it went well, but looks like OSISOFT wasn't impressed. OSISoft is somewhere in the east bay, (Hayward?) and recently acquired by a European company. Because of my industrial control systems and embedded software experiences early in my career I thought I would catch up fast, but no further contact (not even a thanks but no thanks). 
+		Note: They were SIG-Coverity clients and I once signed an NDA with them to have VPN access, COSTLAB and Aasavari did some work with their build/analysis.
+
+	- cribl.io where I was working with two (out of three) co-founders before (ex splunkers) and pinged them on linkedin with the jobs I applied for:
+		the worst phone interview with their recruiter, she was very ignorant about the possible needs, and didn't probe me for any additional information (not in the linkedin profile or the resume), didn't have any information about the company needs or the positions. She is remote, and I thought she is on contract, but I saw her cribl.io e-mail address.
+		I had a strong feeling it was a foregone conclusion, she just went through the motions...
+
+	- Splunk (had a good conversation with Thomas Tuerke ex analysis mgr):
+		good first interview with HR recruiter
+		good second interview (zoom w video) with the hiring manager, thought we will pick up after the Christmas break, thought we will pick up in January for sure.
+		I thought this was right up in my alley, fit like a glove: they have a big bottleneck moving on-prem customers to splunk cloud with help of PS and they are building a team for automating the process as much as possible (mostly using python) for adjusting the collectors and clients, replication of indexes before switchover for smooth transition, etc. I could have burned rubber hitting the road from day one...
+		In the follow up Thomas wished me luck and hinted that "there is such a thing as ageism"
+
+Splunk is using hired.com (I think this is consolidated with jobvite.com), so I duplicated the linkedin profile on hired.com, and a little bit after have created a glassdoor profile.
+The hired.com profile (they give initial promotion when you create a profile) yielded a couple bites so far-recruiters requesting interview:
+
+	-Capital One -very promising (best, most professional recruiter ever) 
+		recruiter interview next step in their process was a proctored and timed codesignal.com coding test setup, where you can run a couple of tests before the final, reviewed anonymously, documented with graded result analysis submitted to the company requested. 
+		That environment is pretty tough, they record your activities, check your desktop, record the video, that you don't have external help, or google anything other than syntax, and then they grade (anonymously) the recording. They give you 70min. for 4 functions to code in their web IDE they say 300 points each,but in the final grade it is somewhat different, they add some points on the speed, execution speed. Each of their code is tested by ~16 input data, only about ~ 4 of them visible to you, the rest is hidden. You have limited (~10) executable run opportunities to test your code, and a test set fails if you exceed the 4 seconds given for runtime.
+
+		The codesignal validated test was Level 5 (out of Level 10), the practice tests were about level 6-8, one would have been ( I think) 980 out of 1200, only missed 5 characters (int(...))
+		I failed this first one, so that didn't go well. I can reapply at Capital One (to have a potential other codesignal exam) in 6 months, the recruiter said that he marked his calendar to follow up
+
+	-dizly.com - full stack developer:
+		Promising recruiter interview, email follow up a take home task, (return assignment in 24-48hrs) which I think I aced, but no reply
+
+	-brex.com -backend engineer:
+		promising phone interview with the hiring mgr with discussing technical details, technology stack, but no continuation
+
+	-workiva.com – Software Engineer/Observability Engineer Role - 100% Remote:
+		 A promising phone interview with the company recruiter, at the end of which she asked three "technical" questions, and likely compared the answers to what engineers gave her in the notes. I started to brush up on java agent know-how, that seemed like a specialty I was a good fit right away, but somewhere in the HR or at the hiring manager got stuck, no follow up.
+
+These processes (I think) still in progress:
+
+	-Travis Credit Union- enterprise software developer: 
+		Little less interesting than any of the others, and their ceiling is significantly lower than the others, but on the other hand it is right here (10 min. commute), and I don't think they are tech savvy judging from the job description :), and their glassdoor reputation is below the other similar (Wells Fargo, other banking).
+		A promising phone interview with their contract recruiter, who will introduce me to the hiring manager next week.
+
+	-Onesignal.com -sdk tools developer:
+		Approached by the hiring manager (Engineering Manager title), and had a video zoom conference discussing a bunch of technical details, including why I think I'm a good choice for the position, and what experience in my past will be valuable for the choice. After that, quickly set up a tech interview with the tech lead for the position.
+		I thought it will be an amazon-google type coding interview, like https://interviewing.io/python-interview-questions/ , but to my surprise it was a logical puzzle (https://www.geeksforgeeks.org/puzzle-set-35-2-eggs-and-100-floors/ except formulated with water balloons instead of eggs ), and then testing java, javascript nuances, to which I haven't been prepared. The java question made me giggle, because that was the example I brought up to Simon that I would fail without looking up first when somebody poked deep in my java, python,javascript, etc. language knowledge. I didn't ace it, but wasn't ignorant  in either of them, he said that I was close.
+		The logic question iteration stopped at 34 as a worst case scenario, later I figured out without looking up the answer that the optimal answer was 14.
+		This was this Friday, so we will see what happens next week, the tech lead is supposed to give notes to the hiring mgr, who will decide on the next step.
+
+	-Blueshift.com - execution engine internal tools developer:
+		Recruiter approached and had an initial phone screen interview, pretty knowledgeable, and technically competent. After that came a zoom video interview with the Director of Engineering about technical questions and my experience. at the end gave me a take home coding test to be returned in 24-48 hrs, which had an added task to create test sets for edge cases, which came in handy because with the help of one of my tests I could improve on the code. I sent it back within an hour. If passing this I will have coding interviews with engineers. Don't know if it will be google/amazon type interviews, or something along the way of the Onesignal which caught me off guard, or if there would be anything at all.
+
+So I'm practicing interview problems (selected python3) I picked up from the codesignal practice runs, then leetcode.com, and from watching the https://interviewing.io/python-interview-questions/ mock interviews, where apparently Google, Amazon, etc. engineers doing mock interviews, and providing feedback. That is somewhat encouraging, as they are a lot of times way off, and (maybe because I'm watching the python interviews) the amazon and google engineers let them get away with it, even getting praised.
+byte-by-byte.com has a pretty good youtube channel for interview preparations, and microsoft has pretty good puzzle and programming problem sets too.
+There is significant overlap between these (I found most of the codesignal problems on leetcode with quick google-ing), but solving them on my own always taught me something useful about coding and design, which could be a costly trap next time on a timed coding and debugging session under pressure.
+Again, I don't think these are real predictors of potential value, but not getting good at it would not help either, and implementing Dijkstra's algorithm or a red-black binary search tree with automatic rebalancing after insert/delete from scratch is fun and one can get hopelessly tank if caught unprepared.
+
+Cheers,
+Ferenc
