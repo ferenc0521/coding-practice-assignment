@@ -1,12 +1,4 @@
-/*## This is a markdown file
-
-Thanks! I forgot one more thing to mention. We can do next week. 
-We should haircut revenue in the model to 95% then apply the 
-historical collections to revenue ratio. That would get me more comfortable. 
-Historically, we’ve always been 5% under budget for revenue, 
-which would mean our collections forecasted would be over budgeted by 5%.
-*/
-#include <cs50.h>
+//#include <cs50.h>
 #include <stdio.h>
 #include <stdbool.h>
 
@@ -15,36 +7,37 @@ bool mastercard(long z);
 bool visa(long z);
 bool luhn(long z);
 
+int d1=0,  d2=0,  d3=0,  d4=0, 
+    d5=0,  d6=0,  d7=0,  d8=0, 
+    d9=0, d10=0, d11=0, d12=0,
+    d13=0, d14=0, d15=0, d16=0;
+ 
 int main(void)
 {
-
-
 // get card number with 13, 15, or 16 digits
     long z;
     do
     {
-        z = get_long("Credit Card number? ");
+        z = 4003600000000014 ; //get_long("Credit Card number? ");
     }
     while (z < 1000000000000 || z > 9999999999999999 || (z < 100000000000000 && z > 9999999999999));
-    return z;
-
-    int a = z % 10;
-    int b = z % 100;
-    int c = z % 1000;
-    int d = z % 10000;
-    int e = z % 100000;
-    int f = z % 1000000;
-    int g = z % 10000000;
-    int h = z % 100000000;
-    int i = z % 1000000000;
-    int j = z % 10000000000;
-    int k = z % 100000000000;
-    int l = z % 1000000000000;
-    int m = z % 10000000000000;
-    int n = z % 100000000000000;
-    int o = z % 1000000000000000;
-    int p = z % 10000000000000000;
-
+    d1  = z % 10;
+    d2  = z/10 % 10;
+    d3  = z/100 % 10;
+    d4  = z/1000 % 10;
+    d5  = z/10000 % 10;
+    d6  = z/100000 % 10;
+    d7  = z/1000000 % 10;
+    d8  = z/10000000 % 10;
+    d9  = z/100000000 % 10;
+    d10 = z/1000000000 % 10;
+    d11 = z/10000000000 % 10;
+    d12 = z/100000000000 % 10;
+    d13 = z/1000000000000 % 10;
+    d14 = z/10000000000000 % 10;
+    d15 = z/100000000000000 % 10;
+    d16 = z/1000000000000000 % 10;
+   
 
 
 // Is it an Amex?
